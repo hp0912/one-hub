@@ -1,7 +1,5 @@
 FROM node:16 as builder
 
-RUN npm install -g yarn
-
 WORKDIR /build
 
 COPY web/package.json .
