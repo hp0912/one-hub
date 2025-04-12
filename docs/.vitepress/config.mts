@@ -20,7 +20,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档', link: '/markdown-examples' }
+      { text: '文档', link: '/deployment/index' }
     ],
 
     sidebar: [
@@ -42,6 +42,7 @@ export default defineConfig({
           { text: '添加 VertexAI', link: '/use/VertexAI' },
           { text: 'Rerank 接口', link: '/use/Rerank' },
           { text: '价格更新', link: '/use/prices_update' },
+          { text: '特殊调用', link: '/use/special' },
           { text: '常见问题', link: '/use/FAQ' }
         ]
       },
