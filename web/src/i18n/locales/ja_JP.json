@@ -1,4 +1,6 @@
 {
+  "invite_count": "招待人数",
+  "invite_reward": "招待報酬",
   "AZURE_OPENAI_ENDPOINT": "AZURE_OPENAI_ENDPOINT",
   "CheckUpdatesTable": {
     "addNewOnly": "新規追加のみ",
@@ -18,7 +20,11 @@
     "pleaseFetchData": "まずデータを取得してください",
     "priceChangeModels": "価格変更モデル（参考用。自分で価格を変更した場合は無視してください）",
     "to": "から",
-    "url": "URL"
+    "url": "URL",
+    "priceServerTotal": "価格サーバー総数",
+    "updateModeAdd": "新規追加のみ",
+    "updateModeUpdate": "価格変更のみ",
+    "updateModeOverwrite": "上書き"
   },
   "Header 配置": "ヘッダー構成",
   "about": {
@@ -762,6 +768,18 @@
         "info": "キーワードを1行ずつ入力して、禁止ワードリストを設定してください。",
         "save": "無効なチャネルキーワード設定を保存します",
         "title": "チャネルキーワード設定を無効にする"
+      },
+      "safetySettings": {
+        "title": "システムセキュリティ設定",
+        "enableSafe": "プロンプトのセキュリティチェックを有効にする",
+        "safeToolName": {
+          "label": "安全チェックツール"
+        },
+        "safeKeyWords": {
+          "label": "キーワードリスト",
+          "placeholder": "1行ずつ入力してください"
+        },
+        "save": "設定を保存する"
       }
     },
     "otherSettings": {
