@@ -70,8 +70,8 @@ const ImportModal = ({ open, onCancel, onOk, existingModels = [] }) => {
             description: modelInfo.description || '',
             context_length: modelInfo.context_length || 0, // 默认值
             max_tokens: modelInfo.max_tokens || 0,
-            input_modalities: JSON.stringify(modelInfo.input_modalities || ['text']),
-            output_modalities: JSON.stringify(modelInfo.output_modalities || ['text']),
+            input_modalities: JSON.stringify(modelInfo.input_modalities || []),
+            output_modalities: JSON.stringify(modelInfo.output_modalities || []),
             tags: JSON.stringify(modelInfo.tags || []),
             isConflict: existingModels.includes(modelInfo.model || item.model)
           };
@@ -117,7 +117,8 @@ const ImportModal = ({ open, onCancel, onOk, existingModels = [] }) => {
 
       try {
         // 准备提交的数据（移除 isConflict 标记）
-        const { isConflict, ...submitData } = item;
+        const submitData = { ...item };
+        delete submitData.isConflict;
 
         if (item.isConflict && conflictStrategy === 'overwrite') {
           // 查找现有记录的 ID（需要从 existingModels 获取完整信息）
@@ -484,7 +485,7 @@ const ImportModal = ({ open, onCancel, onOk, existingModels = [] }) => {
           <Box sx={{ textAlign: 'center', py: 4, color: 'text.secondary' }}>
             <Icon icon="solar:cloud-download-linear" width={48} style={{ opacity: 0.5 }} />
             <Typography variant="body2" sx={{ mt: 1 }}>
-              输入 JSON URL 并点击"获取数据"开始
+              输入JSON URL并点击&quot;获取数据&quot;开始
             </Typography>
           </Box>
         )}
